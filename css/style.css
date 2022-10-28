@@ -51,17 +51,17 @@ div {
 }
 
 .trasera {
-    background-color: rgb(131, 143, 143);
+    background-color: rgb(201, 173, 15);
     transform: rotateY(180deg);
 }
 
 .superior {
-    background: linear-gradient(rgba(255, 0, 0, 0.747), rgba(255, 0, 0, 0.747));
+    background: linear-gradient(rgba(245, 243, 243, 0.747), rgba(245, 243, 243, 0.747));
 }
 
 .nuevo-juego {
     cursor: pointer;
-    background: linear-gradient(rgba(0, 26, 255, 0.623), rgb(0, 26, 255, 0.623));
+    background: linear-gradient(rgba(247, 185, 15, 0.623), rgb(247, 185, 15, 0.623));
     padding: 20px;
     border-radius: 50px;
     border: rgb(7, 2, 2) 5px solid;
