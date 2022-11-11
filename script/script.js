@@ -1,7 +1,7 @@
 let iconos = []
         let selecciones = []
         var cont = 0
-        var contador 
+        var contador = 0
         generarTablero()
 
         function cargarIconos() {
@@ -21,14 +21,37 @@ let iconos = []
                 '<i class="fa fa-car"></i>',
                 '<i class="fa fa-check-square"></i>',
                 '<i class="fa fa-square"></i>',
-                '<i class="fa fa-cog fa-fw"></i>'
+                '<i class="fa fa-cog fa-fw"></i>',
+                '<i class="fas fa-yin-yang"></i>',
+                '<i class="fas fa-yen-sign"></i>',
+                '<i class="fas fa-x-ray"></i>',
+                '<i class="fas fa-wrench"></i>',
+                '<i class="fas fa-won-sign"></i>',
+                '<i class="fas fa-wine-glass-alt"></i>',
+                '<i class="fas fa-wine-bottle"></i>',
+                '<i class="fas fa-wind"></i>',
+                '<i class="fas fa-window-close"></i>',
+                '<i class="fas fa-window-minimize"></i>',
+                '<i class="fas fa-wine-glass"></i>',
+                '<i class="fas fa-virus"></i>',
+                '<i class="fas fa-virus-slash"></i>',
+                '<i class="fas fa-viruses"></i>',
+                '<i class="fas fa-voicemail"></i>',
+                '<i class="fas fa-venus-mars"></i>'
             ]
             
             
         }
 
+        function getRandomInt(min, max) {
+            min = Math.ceil(1);
+            max = Math.floor(24);
+            return Math.floor(Math.random() * (max - min) + min);
+          }
+
         function generarTablero() {
             cargarIconos()
+            var aleatorio = getRandomInt();
             selecciones = []
             let tablero = document.getElementById("tablero")
             let tarjetas = []
@@ -36,7 +59,7 @@ let iconos = []
                 tarjetas.push(`
                 <div class="area-tarjeta" onclick="seleccionarTarjeta(${i})">
                     <div class="tarjeta" id="tarjeta${i}">
-                        <div class="cara trasera" id="trasera${i}">${iconos[5]}</div>
+                        <div class="cara trasera" id="trasera${i}">${iconos[aleatorio]}</div>
                         <div class="cara superior">
                             <i class="far fa-question-circle"></i>
                         </div>
@@ -73,6 +96,7 @@ let iconos = []
                     tarjeta1.style.transform = "rotateY(0deg)"
                     tarjeta2.style.transform = "rotateY(0deg)"
                     contador = cont + 1 
+                    '<div class="cara trasera">${contador}</div>'
                 }else{
                     trasera1.style.background = "plum"
                     trasera2.style.background = "plum"
